@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/to\ do/Pasted\ image.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.todos-container {
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: rgb(224, 117, 192);
+    border-radius: 20px;
+
+    backdrop-filter: blur(15px);
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#task-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    background-color: #dd8ac2;
+    color: #aa4290;
+    border: 2px solid #d866b6;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: #c7a6b7;
+    color: white;
+}
+
+/* List Styling */
+#task-list {
+    list-style: none;
+    width: 100%;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* Highlight the task when clicked */
+#task-list li.selected {
+    border-color: #ffd700;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.task-check {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #0a6b65;
+}
+
+.completed span {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
